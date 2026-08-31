@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fcf535fc379787055263878578c044e",
+    "content-hash": "579778ba4fc2909d7a0bfac78087b253",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -272,24 +272,24 @@
         },
         {
             "name": "lasserafn/php-initials",
-            "version": "3.1",
+            "version": "dev-fix-hyphenated-names",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LasseRafn/php-initials.git",
-                "reference": "d287e1542687390eb68de779949bc0adc49e2d52"
+                "url": "https://github.com/stevelacey/php-initials.git",
+                "reference": "71d4d40fe48c893db9042032cefb73f08842855c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LasseRafn/php-initials/zipball/d287e1542687390eb68de779949bc0adc49e2d52",
-                "reference": "d287e1542687390eb68de779949bc0adc49e2d52",
+                "url": "https://api.github.com/repos/stevelacey/php-initials/zipball/71d4d40fe48c893db9042032cefb73f08842855c",
+                "reference": "71d4d40fe48c893db9042032cefb73f08842855c",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6|^7.0|^7.1|^8.0"
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7",
-                "satooshi/php-coveralls": "^1.0"
+                "php-coveralls/php-coveralls": "^2.7",
+                "phpunit/phpunit": "^13.3"
             },
             "type": "library",
             "autoload": {
@@ -297,7 +297,11 @@
                     "LasseRafn\\Initials\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Initials\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -309,14 +313,13 @@
             ],
             "description": "A package to generate initials in PHP",
             "keywords": [
-                "Initials",
+                "initials",
                 "php"
             ],
             "support": {
-                "issues": "https://github.com/LasseRafn/php-initials/issues",
-                "source": "https://github.com/LasseRafn/php-initials/tree/3.1"
+                "source": "https://github.com/stevelacey/php-initials/tree/fix-hyphenated-names"
             },
-            "time": "2020-12-24T12:25:51+00:00"
+            "time": "2026-08-31T14:42:39+00:00"
         },
         {
             "name": "lasserafn/php-string-script-language",
@@ -2567,9 +2570,18 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "lasserafn/php-initials",
+            "version": "dev-fix-hyphenated-names",
+            "alias": "3.1",
+            "alias_normalized": "3.1.0.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "lasserafn/php-initials": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
